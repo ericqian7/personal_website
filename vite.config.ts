@@ -18,6 +18,6 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'docs', // 👈 GitHub Pages will serve from /docs
     },
-    base: '/personal_website/', // 👈 IMPORTANT: matches your repo name
+    base: '/me/', // 👈 IMPORTANT: matches your repo name
   };
 });
