@@ -3,15 +3,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import beboiler from '../images/bb.png'
 import tdintigami from '../images/tdintigami.png'
-
+import c_terminal from '../images/c_terminal.jpeg'
 const projects = [
     {
         title: "TDINTigami",
         category: "Data Visualization",
-        duration: "2024",
-        date: "Dec 2024",
+        duration: "2023",
+        date: "Nov 2023",
         image: tdintigami,
-        description: "A creative personal portfolio website built with React, TypeScript, and Framer Motion. Features smooth animations, responsive design, and a modern tech aesthetic with interactive elements.",
+        description: "An interactive platform featuring every unique quarterback touchdown-interception ratio in a season in the history of the NFL. Check it out at",
+        websiteUrl: "https://tdintigami.com",
         technologies: [
             { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
             { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
@@ -22,9 +23,10 @@ const projects = [
         title: "BeBoiler",
         category: "Mobile App",
         duration: "2024",
-        date: "Nov 2024",
+        date: "Dec 2024",
         image: beboiler,
-        description: "Developed an automated data pipeline for processing and analyzing large datasets. Implemented ETL processes, data validation, and real-time monitoring dashboards.",
+        description: "A full stack social media app for Purdue students to explore and share local monuments.",
+        websiteUrl: null,
         technologies: [
             { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
             { name: "NestJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" },
@@ -35,10 +37,11 @@ const projects = [
     {
         title: "Custom Shell in C",
         category: "Low-Level Programming",
-        duration: "2024",
-        date: "Oct 2024",
-        image: "https://picsum.photos/seed/ml-model/200/200",
-        description: "Built and deployed a machine learning model for predictive analytics. Implemented feature engineering, model training, and API endpoints for real-time predictions.",
+        duration: "2025",
+        date: "Apr 2025",
+        image: c_terminal,
+        description: "A fully functional shell interpreter from the ground up that combines features from other shells such as bash and csh.",
+        websiteUrl: null,
         technologies: [
             { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" }
         ]
@@ -52,10 +55,11 @@ const ProjectCard: React.FC<{
     date: string;
     image: string;
     description: string;
+    websiteUrl: string | null;
     technologies: Array<{ name: string; icon: string }>;
     isLeft: boolean;
     index: number;
-}> = ({ title, category, duration, date, image, description, technologies, isLeft, index }) => {
+}> = ({ title, category, duration, date, image, description, websiteUrl, technologies, isLeft, index }) => {
     return (
         <motion.div
             className={`flex items-center w-full mb-16 
@@ -105,7 +109,21 @@ const ProjectCard: React.FC<{
                     </div>
                 </div>
                 
-                <p className="text-gray-200 leading-relaxed mb-6">{description}</p>
+                <p className="text-gray-200 leading-relaxed mb-6">
+                    {description}
+                    {websiteUrl && (
+                        <span className="ml-1">
+                            <a 
+                                href={websiteUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-300 hover:text-pink-400 font-bold font-mono text-lg underline decoration-pink-400/50 hover:decoration-pink-400 transition-all duration-300 hover:scale-105 inline-block transform hover:-translate-y-0.5"
+                            >
+                                tdintigami.com
+                            </a>
+                        </span>
+                    )}
+                </p>
                 
                 <div>
                     <h4 className="text-sm font-semibold text-pink-400 mb-3">Technologies Used:</h4>

@@ -32,10 +32,6 @@ const IntroSection: React.FC = () => {
       image: noodles
     },
     {
-      phrase: "a creative problem solver",
-      image: pge
-    },
-    {
       phrase: "a climbing enthusiast",
       image: climb
     }

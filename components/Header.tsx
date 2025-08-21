@@ -36,13 +36,26 @@ const Header: React.FC = () => {
     // Close menu on outside click
     useEffect(() => {
         const handleClick = (e: MouseEvent) => {
-            if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+            console.log('mousedown event fired, target:', e.target);
+            // Don't close if clicking on the hamburger button itself
+            const target = e.target as Node;
+            const hamburgerButton = document.querySelector('[aria-label*="menu"]');
+            
+            if (hamburgerButton && hamburgerButton.contains(target)) {
+                console.log('Clicked on hamburger button, not closing');
+                return;
+            }
+            
+            if (menuRef.current && !menuRef.current.contains(target)) {
+                console.log('Clicked outside, closing menu');
                 setMenuOpen(false);
             }
         };
         if (menuOpen) {
+            console.log('Adding mousedown listener');
             document.addEventListener('mousedown', handleClick);
         } else {
+            console.log('Removing mousedown listener');
             document.removeEventListener('mousedown', handleClick);
         }
         return () => document.removeEventListener('mousedown', handleClick);
@@ -89,7 +102,15 @@ const Header: React.FC = () => {
                     <button
                         className="flex flex-col items-center justify-center w-10 h-10 rounded-lg bg-gray-800/50 border border-cyan-400/30 hover:border-cyan-400/60 hover:bg-gray-800/80 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                         aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-                        onClick={() => setMenuOpen((open) => !open)}
+                        onMouseDown={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            console.log('Button mousedown, current state:', menuOpen);
+                            setMenuOpen(prev => {
+                                console.log('Setting menu to:', !prev);
+                                return !prev;
+                            });
+                        }}
                     >
                         <span className="sr-only">Menu</span>
                         <motion.div

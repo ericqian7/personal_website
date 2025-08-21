@@ -10,7 +10,7 @@ const workExperiences = [
         position: "Data Engineering Intern",
         duration: "Summer 2025",
         date: "May 2025 - Aug 2025",
-        logo: pge, // Replace with actual PG&E logo
+        logo: pge,
         description: "PG&E is a natural gas and electric utilities company serving 5.2 million households in the northern two-thirds of California.",
         responsibilities: [
             "Created data pipelines to monitor greenhouse gas emissions from meter leaks.",
@@ -28,11 +28,11 @@ const workExperiences = [
         position: "Backend Software Engineering Intern",
         duration: "Spring 2024",
         date: "Apr 2024 - May 2025",
-        logo: sectech, // Replace with actual company logo
-        description: `Securitas Technology is a world leader and global provider of security, health and safety technologies. As aBackend Software Engineering Intern`,
+        logo: sectech,
+        description: `Securitas Technology is a world leader and global provider of security, health and safety technologies.`,
         responsibilities: [
-            "Developed and maintained backend services for a real-time security monitoring platform.",
-            "Optimized database queries and implemented caching strategies to improve application performance."
+            "Created multithreaded Python scripts to obtain ZIP+4 codes and website fields for 1.25 million Salesforce accounts.",
+            "Developed several ETL data pipelines to integrate Emplifi API data into Google Cloud."
         ],
         technologies: [
             { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },

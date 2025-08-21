@@ -2,23 +2,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PhotoCard from './PhotoCard';
+import chicken from '../images/chicken.jpg'
+import curry from '../images/curry.jpg'
+import soup from '../images/soup.jpg'
+import taco from '../images/taco.jpg'
 
 const photos = [
     {
-        title: "Homemade Pasta",
-        imageUrl: "https://picsum.photos/seed/food1/600/600"
+        title: "Soy Sauce Glazed Chicken",
+        imageUrl: chicken
     },
     {
-        title: "Sourdough Bread",
-        imageUrl: "https://picsum.photos/seed/food2/600/600"
+        title: "Thai Curry",
+        imageUrl: curry
     },
     {
-        title: "Gourmet Burger",
-        imageUrl: "https://picsum.photos/seed/food3/600/600"
+        title: "French Onion Soup",
+        imageUrl: soup
     },
     {
-        title: "Artisan Pizza",
-        imageUrl: "https://picsum.photos/seed/food4/600/600"
+        title: "Taco Tuesday",
+        imageUrl: taco
     }
 ];
 
@@ -42,7 +46,7 @@ const CookingSection: React.FC = () => {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    When I'm not crafting pixels, I'm crafting flavors. Here's a taste of my culinary adventures.
+                    #sousvide. #emulsify. #blanch. #braise. #deglaze. #render. #poach. #temper. #reduce. #caramelize. #julienne. #sear. #whip. #proof. #infuse. #laminate. #ferment. #confit. #clarify. #torch.
                 </motion.p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {photos.map((photo, index) => (

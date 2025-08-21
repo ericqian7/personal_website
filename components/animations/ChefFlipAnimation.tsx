@@ -57,7 +57,7 @@ const ChefFlipAnimation: React.FC = () => {
 
         {/* Speech bubble - fades in near the end */}
         <motion.div 
-          className="absolute top-16 left-1/2 md:left-52 -translate-x-1/2 md:translate-x-0 z-20"
+          className="absolute top-16 left-3/4 md:left-52 -translate-x-1/2 md:translate-x-0 z-20"
           style={{ opacity: bubbleOpacity, scale: bubbleScale }}
         >
           <div className="relative">

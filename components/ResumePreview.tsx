@@ -26,7 +26,7 @@ const ResumePreview: React.FC = () => {
                     </div>
                     <div>
                         <h3 className="text-xl font-bold text-cyan-300 mb-1">Eric Qian - Resume</h3>
-                        <p className="text-gray-300 font-mono text-sm">Software Engineering & Data Science</p>
+                        <p className="text-gray-300 font-mono text-sm">Software Engineer</p>
                         <p className="text-pink-400 text-xs">Click to view full resume</p>
                     </div>
                 </div>
@@ -35,10 +35,6 @@ const ResumePreview: React.FC = () => {
                     <div className="flex justify-between text-sm">
                         <span className="text-gray-400">Education:</span>
                         <span className="text-cyan-300">Purdue University</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Experience:</span>
-                        <span className="text-cyan-300">PG&E, Securitas Technology</span>
                     </div>
                 </div>
             </motion.div>

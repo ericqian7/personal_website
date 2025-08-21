@@ -2,23 +2,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PhotoCard from './PhotoCard';
-import meditate from '../images/meditate.jpg'
+import bear from '../images/bear.jpeg'
+import picrocks from '../images/picrocks.jpeg'
+import yosemite from '../images/yosemite.jpg'
+import pointreyes from '../images/pointreyes.jpg'
+
 const photos = [
     {
-        title: "Outdoor Climb",
-        imageUrl: "https://picsum.photos/seed/climb1/600/600"
+        title: "Point Reyes",
+        imageUrl: pointreyes
     },
     {
-        title: "Gym Session",
-        imageUrl: "https://picsum.photos/seed/climb2/600/600"
+        title: "Bear in Yellowstone",
+        imageUrl: bear
     },
     {
-        title: "Mountain View",
-        imageUrl: meditate
+        title: "Yosemite",
+        imageUrl: yosemite
     },
     {
-        title: "Chalking Up",
-        imageUrl: "https://picsum.photos/seed/climb4/600/600"
+        title: "Pictured Rocks",
+        imageUrl: picrocks
     }
 ];
 
@@ -33,7 +37,7 @@ const BoulderingSection: React.FC = () => {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.8 }}
                 >
-                    Reaching New Heights
+                    The Great Outdoors
                 </motion.h2>
                 <motion.p 
                     className="font-mono text-lg text-gray-300 mb-12"
@@ -42,7 +46,7 @@ const BoulderingSection: React.FC = () => {
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    Beyond the screen, I find my challenges on the wall. Bouldering is my meditation and my workout.
+#backpacking. #bouldering. #orienteering. #summit. #scramble. #campfirecook. #hammocklife. #treeline. #switchback. #basecamp. #waterfilter.
                 </motion.p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {photos.map((photo, index) => (
