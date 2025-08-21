@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    'pixel': ['"Press Start 2P"', 'cursive'],
+                    'sans': ['"Roboto Mono"', 'sans-serif'],
+                },
+                keyframes: {
+                    glitch: {
+                        '0%, 100%': { transform: 'translate(0, 0)' },
+                        '20%': { transform: 'translate(-5px, 5px)' },
+                        '40%': { transform: 'translate(-5px, -5px)' },
+                        '60%': { transform: 'translate(5px, 5px)' },
+                        '80%': { transform: 'translate(5px, -5px)' },
+                    },
+                    fadeIn: {
+                        '0%': { opacity: 0 },
+                        '100%': { opacity: 1 },
+                    },
+                    flicker: {
+                      '0%, 19.9%, 22%, 62.9%, 64%, 64.9%, 70%, 100%': {
+                        opacity: 0.99,
+                        textShadow: '0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff'
+                      },
+                      '20%, 21.9%, 63%, 63.9%, 65%, 69.9%': {
+                        opacity: 0.4,
+                        textShadow: 'none'
+                      }
+                    }
+                },
+                animation: {
+                    glitch: 'glitch 0.3s linear infinite',
+                    fadeIn: 'fadeIn 1s ease-in-out',
+                    flicker: 'flicker 3s linear infinite',
+                },
+            },
+        },
+    };
+    </script>
+    <script src="https://unpkg.com/framer-motion@10/dist/framer-motion.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #f0f2f5;
+        color: #1a202c;
+      }
+      .cyber-bg {
+        background-color: #0d0221;
+        background-image: 
+          linear-gradient(rgba(13, 2, 33, 0.9), rgba(13, 2, 33, 0.9)),
+          linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent),
+          linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+        background-size: 100%, 50px 50px, 50px 50px;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.12"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-B85BV8h_.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
