@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PhotoCard from './PhotoCard';
-
+import meditate from '../images/meditate.jpg'
 const photos = [
     {
         title: "Outdoor Climb",
@@ -14,7 +14,7 @@ const photos = [
     },
     {
         title: "Mountain View",
-        imageUrl: "https://picsum.photos/seed/climb3/600/600"
+        imageUrl: meditate
     },
     {
         title: "Chalking Up",

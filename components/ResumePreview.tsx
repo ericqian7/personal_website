@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import resume from '../Eric_Qian_resume.pdf';
 const ResumePreview: React.FC = () => {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -80,7 +80,7 @@ const ResumePreview: React.FC = () => {
                             {/* PDF Viewer */}
                             <div className="flex-1 p-4">
                                 <iframe
-                                    src="/Eric_Qian_Resume.pdf"
+                                    src={resume}
                                     className="w-full h-full rounded-lg border border-cyan-400/30"
                                     title="Resume PDF"
                                 />
@@ -92,7 +92,7 @@ const ResumePreview: React.FC = () => {
                                 std::cout &lt;&lt; "#Employed\n";
                                 </p>
                                 <a
-                                    href="/Eric_Qian_Resume.pdf"
+                                    href={resume}
                                     download
                                     className="inline-flex items-center bg-cyan-400 text-gray-900 font-bold py-2 px-4 rounded-lg hover:bg-pink-500 transition-colors"
                                 >
