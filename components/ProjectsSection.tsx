@@ -40,7 +40,7 @@ const projects = [
         duration: "2025",
         date: "Apr 2025",
         image: c_terminal,
-        description: "A fully functional shell interpreter from the ground up that combines features from other shells such as bash and csh.",
+        description: "A fully functional shell interpreter built from the ground up that combines features from other shells such as bash and csh.",
         websiteUrl: null,
         technologies: [
             { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" }

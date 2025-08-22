@@ -97,6 +97,7 @@ const IntroSection: React.FC = () => {
             </div>
             
             <p className="font-mono text-gray-300 leading-relaxed mb-6">
+              Hello! I'm Eric Qian, a rising senior at Purdue University studying Computer Science. I'm interested in solving complex problems with code. I'm looking for new grad roles in software engineering, so feel free to check out my resume below and reach out!
             </p>
             <ResumePreview />
           </div>

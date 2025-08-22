@@ -26,7 +26,7 @@ const sectionLinks = [
     { name: 'Home', id: 'intro' },
     { name: 'Experience', id: 'experience' },
     { name: 'Cooking', id: 'cooking' },
-    { name: 'Bouldering', id: 'bouldering' }
+    { name: 'Outdoors', id: 'outdoors' }
 ];
 
 const Header: React.FC = () => {

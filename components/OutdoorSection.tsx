@@ -26,9 +26,9 @@ const photos = [
     }
 ];
 
-const BoulderingSection: React.FC = () => {
+const OutdoorsSection: React.FC = () => {
     return (
-        <section id="bouldering" className="py-20 px-4 sm:px-8 bg-gray-900">
+        <section id="outdoors" className="py-20 px-4 sm:px-8 bg-gray-900">
             <div className="w-full max-w-6xl mx-auto text-center">
                 <motion.h2 
                     className="text-4xl md:text-5xl font-bold text-cyan-300 mb-4"
@@ -66,4 +66,4 @@ const BoulderingSection: React.FC = () => {
     );
 };
 
-export default BoulderingSection;
+export default OutdoorsSection;
