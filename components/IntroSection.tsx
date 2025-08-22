@@ -114,57 +114,25 @@ const IntroSection: React.FC = () => {
             const targetPosition = nextSection.offsetTop;
             const startPosition = window.pageYOffset;
             const distance = targetPosition - startPosition;
-            const duration = 3000; // 5 seconds for very slow scroll
+            const duration = 3000; // 3 seconds for very slow scroll
             let startTime: number | null = null;
-            let animationId: number | null = null;
-            let isCancelled = false;
-            
-            // Function to cancel animation
-            const cancelAnimation = () => {
-              isCancelled = true;
-              if (animationId) {
-                cancelAnimationFrame(animationId);
-              }
-            };
-            
-            // Listen for user interaction to cancel animation
-            const handleUserInteraction = () => {
-              cancelAnimation();
-              // Remove event listeners
-              window.removeEventListener('wheel', handleUserInteraction);
-              window.removeEventListener('mousemove', handleUserInteraction);
-              window.removeEventListener('keydown', handleUserInteraction);
-              window.removeEventListener('touchstart', handleUserInteraction);
-            };
-            
-            // Add event listeners for user interaction
-            window.addEventListener('wheel', handleUserInteraction);
-            window.addEventListener('mousemove', handleUserInteraction);
-            window.addEventListener('keydown', handleUserInteraction);
-            window.addEventListener('touchstart', handleUserInteraction);
             
             const animateScroll = (currentTime: number) => {
               if (startTime === null) startTime = currentTime;
               const timeElapsed = currentTime - startTime;
               const progress = Math.min(timeElapsed / duration, 1);
               
-              // Check if animation was cancelled
-              if (isCancelled) return;
-              
               // Easing function for smooth deceleration
               const easeOutQuart = 1 - Math.pow(1 - progress, 4);
               
               window.scrollTo(0, startPosition + distance * easeOutQuart);
               
-              if (progress < 1 && !isCancelled) {
-                animationId = requestAnimationFrame(animateScroll);
-              } else {
-                // Clean up event listeners when animation completes
-                handleUserInteraction();
+              if (progress < 1) {
+                requestAnimationFrame(animateScroll);
               }
             };
             
-            animationId = requestAnimationFrame(animateScroll);
+            requestAnimationFrame(animateScroll);
           }
         }}
         whileHover={{ scale: 1.1 }}
